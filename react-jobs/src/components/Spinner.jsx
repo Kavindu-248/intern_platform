@@ -1,9 +1,20 @@
+/* eslint-disable react/prop-types */
 
+import ClipLoader from 'react-spinners/ClipLoader';
 
-const Spinner = () => {
+const override = {
+  display: 'block',
+  margin: '100px auto',
+};
+
+const Spinner = ({ loading }) => {
   return (
-    <div>Spinner</div>
-  )
-}
-
-export default Spinner
+    <ClipLoader
+      color='#4338ca'
+      loading={loading}
+      cssOverride={override}
+      size={150}
+    />
+  );
+};
+export default Spinner;
